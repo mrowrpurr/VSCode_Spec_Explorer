@@ -28,9 +28,7 @@
     "clean-build": "pnpm run clean && pnpm run build",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "lint": "eslint src --ext ts",
-    "test": "vscode-test",
-    "build-test": "pnpm run build && pnpm run build-tests && pnpm run lint && pnpm run test"
+    "lint": "eslint src --ext ts"
   },
   "dependencies": {
     "@spec-explorer/extension": "workspace:*"

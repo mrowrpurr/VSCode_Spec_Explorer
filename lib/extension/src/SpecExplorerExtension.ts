@@ -1,22 +1,16 @@
 import * as vscode from "vscode";
+import { SpecController } from "./SpecController";
 
 export class SpecExplorerExtension {
-    onActivate: Function[] = [];
-    onDeactivate: Function[] = [];
+    controller: SpecController | undefined;
 
     activate(context: vscode.ExtensionContext) {
-        vscode.window.showInformationMessage(`i was activated: ${context.extension.id}`);
-
-        for (const fn of this.onActivate) fn();
-        let disposable = vscode.commands.registerCommand("spec-explorer.helloWorld", () => {
-            vscode.window.showInformationMessage("HELLO from LIBRARY (changed)!");
-        });
-        context.subscriptions.push(disposable);
+        this.controller = new SpecController();
+        // show info message that we were activated:
+        vscode.window.showInformationMessage("ACTIVATED!");
     }
 
-    deactivate() {
-        for (const fn of this.onDeactivate) fn();
-    }
+    deactivate() {}
 
     sayHello(text: string) {
         vscode.window.showInformationMessage(`!!! HELLO! ${text}`);
