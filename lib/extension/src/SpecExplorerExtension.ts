@@ -5,7 +5,7 @@ export class SpecExplorerExtension {
         console.log("Hiiiii!");
 
         let disposable = vscode.commands.registerCommand("spec-explorer.helloWorld", () => {
-            vscode.window.showInformationMessage("HELLO from LIBRARY!");
+            vscode.window.showInformationMessage("HELLO from LIBRARY (changed)!");
         });
 
         context.subscriptions.push(disposable);

@@ -22,14 +22,10 @@
   "scripts": {
     "vscode:prepublish": "pnpm run package",
     "build": "webpack",
-    "build-all": "pnpm build && pnpm build-tests",
-    "clean": "del tsconfig.tsbuildinfo && rd /s /q dist && rd /s /q out",
+    "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
     "clean-build": "pnpm run clean && pnpm run build",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "build-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "pnpm run build-tests && pnpm run build && pnpm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
     "build-test": "pnpm run build && pnpm run build-tests && pnpm run lint && pnpm run test"
@@ -38,15 +34,10 @@
     "@spec-explorer/extension": "workspace:*"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
-    "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8",
-    "chai": "4.4.1",
     "eslint": "^8.56.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",

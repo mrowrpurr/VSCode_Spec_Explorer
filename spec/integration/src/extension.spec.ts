@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import * as extension from "../extension";
+import * as extension from "./extension";
 
 suite("Extension Test Suite", () => {
     test("Sample test", () => {

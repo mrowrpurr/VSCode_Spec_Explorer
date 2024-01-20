@@ -2,6 +2,6 @@ packages:
   - app
   - lib/core
   - lib/extension
-  - test/unit/core
-  - test/unit/extension
-  - test/integration
+  - spec/unit/core
+  - spec/unit/extension
+  - spec/integration
