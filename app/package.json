@@ -22,6 +22,8 @@
   "scripts": {
     "vscode:prepublish": "pnpm run package",
     "build": "webpack",
+    "clean": "rd /s /q dist",
+    "clean-build": "pnpm run clean && pnpm run build",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
     "build-tests": "tsc -p . --outDir out",
@@ -31,7 +33,7 @@
     "test": "vscode-test"
   },
   "dependencies": {
-    "@spec-explorer/lib": "workspace:*"
+    "@spec-explorer/library": "workspace:*"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",

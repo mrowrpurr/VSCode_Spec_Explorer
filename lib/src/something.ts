@@ -1,10 +1,6 @@
 export class Something {
-    constructor() {
-        console.log("Something");
-    }
-
     getString(): string {
-        return "Something!";
+        return "Something!?";
     }
 
     getNumberx(): number {

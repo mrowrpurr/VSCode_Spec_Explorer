@@ -1,12 +1,14 @@
 {
-  "name": "@spec-explorer/lib",
+  "name": "@spec-explorer/library",
   "version": "1.0.0",
   "description": "...",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
+    "clean-build": "pnpm run clean && pnpm run build"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",

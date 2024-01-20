@@ -15,9 +15,33 @@
             // }
         },
         {
-            "label": "Run Tests",
+            "label": "Watch Unit Tests",
+            "type": "shell",
+            "command": "pnpm --filter unit-tests test-watch",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "Run All Tests",
             "type": "shell",
             "command": "pnpm test",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "Build All",
+            "type": "shell",
+            "command": "pnpm build",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "Clean All",
+            "type": "shell",
+            "command": "pnpm clean",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "Clean + Build All",
+            "type": "shell",
+            "command": "pnpm clean-build",
             "problemMatcher": "$tsc"
         }
     ]

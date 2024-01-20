@@ -1,6 +1,6 @@
 import { describe } from "mocha";
 import { expect } from "chai";
-import { Something } from "@spec-explorer/my-lib";
+import { Something } from "@spec-explorer/library";
 
 describe("Something?", () => {
     it("should work", () => {

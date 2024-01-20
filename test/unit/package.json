@@ -1,5 +1,5 @@
 {
-  "name": "@spec-explorer/unit-tests",
+  "name": "unit-tests",
   "version": "1.0.0",
   "description": "...",
   "main": "dist/index.js",
@@ -7,10 +7,13 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "ts-mocha --require ts-node/esm src/**/*.spec.ts"
+    "clean": "rd /s /q dist",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "test": "ts-mocha --require ts-node/esm src/**/*.spec.ts",
+    "test-watch": "ts-mocha --require ts-node/esm --watch src/**/*.spec.ts"
   },
   "dependencies": {
-    "@spec-explorer/lib": "workspace:*"
+    "@spec-explorer/library": "workspace:*"
   },
   "devDependencies": {
     "@types/chai": "^4.3.11",

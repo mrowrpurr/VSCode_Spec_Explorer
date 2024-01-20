@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { Something } from "@spec-explorer/lib";
+import { Something } from "@spec-explorer/library";
 
 export function activate(context: vscode.ExtensionContext) {
     // TODO: where does this print out???
