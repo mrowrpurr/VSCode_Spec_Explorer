@@ -2,6 +2,6 @@
 
 # `Spec Explorer` _for VS Code_
 
-Test Support for **ANY** test framework
+Support for **ANY** test framework!
 
 > ... _so long as you provide scripts for test **discovery** and **running**_
