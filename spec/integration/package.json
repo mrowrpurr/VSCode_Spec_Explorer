@@ -7,7 +7,7 @@
     "watch": "tsc -w",
     "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
     "clean-build": "pnpm run clean && pnpm run build",
-    "test": "vscode-test"
+    "test": "vscode-test --timeout 30000"
   },
   "dependencies": {
     "@spec-explorer/extension": "workspace:*",

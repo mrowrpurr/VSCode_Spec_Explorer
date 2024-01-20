@@ -9,6 +9,14 @@ export class SpecExplorerExtension {
         });
 
         context.subscriptions.push(disposable);
+
+        vscode.workspace.onDidChangeWorkspaceFolders(() => {
+            vscode.window.showInformationMessage("Workspace folders changed!");
+        });
+
+        vscode.workspace.updateWorkspaceFolders(0, 0, {
+            uri: vscode.Uri.file("C:/"),
+        });
     }
 
     deactivate() {}
