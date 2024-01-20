@@ -7,7 +7,7 @@
     "watch": "tsc -w",
     "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
     "clean-build": "pnpm run clean && pnpm run build",
-    "test": "vscode-test --timeout 30000"
+    "test": "vscode-test"
   },
   "dependencies": {
     "@spec-explorer/extension": "workspace:*",
@@ -26,6 +26,9 @@
   "engines": {
     "vscode": "^1.85.0"
   },
+  "activationEvents": [
+    "workspaceContains:.specs.json"
+  ],
   "contributes": {
     "commands": [
       {

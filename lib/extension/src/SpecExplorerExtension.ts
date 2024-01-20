@@ -1,23 +1,24 @@
 import * as vscode from "vscode";
 
 export class SpecExplorerExtension {
-    activate(context: vscode.ExtensionContext) {
-        console.log("Hiiiii!");
+    onActivate: Function[] = [];
+    onDeactivate: Function[] = [];
 
+    activate(context: vscode.ExtensionContext) {
+        vscode.window.showInformationMessage(`i was activated: ${context.extension.id}`);
+
+        for (const fn of this.onActivate) fn();
         let disposable = vscode.commands.registerCommand("spec-explorer.helloWorld", () => {
             vscode.window.showInformationMessage("HELLO from LIBRARY (changed)!");
         });
-
         context.subscriptions.push(disposable);
-
-        vscode.workspace.onDidChangeWorkspaceFolders(() => {
-            vscode.window.showInformationMessage("Workspace folders changed!");
-        });
-
-        vscode.workspace.updateWorkspaceFolders(0, 0, {
-            uri: vscode.Uri.file("C:/"),
-        });
     }
 
-    deactivate() {}
+    deactivate() {
+        for (const fn of this.onDeactivate) fn();
+    }
+
+    sayHello(text: string) {
+        vscode.window.showInformationMessage(`!!! HELLO! ${text}`);
+    }
 }
