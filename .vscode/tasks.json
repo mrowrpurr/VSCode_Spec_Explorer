@@ -9,10 +9,10 @@
             "isBackground": true,
             "presentation": {
                 "reveal": "silent"
-            },
-            "runOptions": {
-                "runOn": "folderOpen"
             }
+            // "runOptions": {
+            //     "runOn": "folderOpen"
+            // }
         },
         {
             "label": "Run Tests",

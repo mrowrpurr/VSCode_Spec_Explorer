@@ -1,5 +1,5 @@
 {
-  "name": "@spec-explorer/my-lib",
+  "name": "@spec-explorer/lib",
   "version": "1.0.0",
   "description": "...",
   "main": "dist/index.js",

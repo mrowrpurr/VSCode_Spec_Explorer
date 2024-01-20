@@ -1,7 +1,5 @@
 {
     "compilerOptions": {
-        /* Can we do things without paths... ? */
-
         /* Base Options: */
         "esModuleInterop": true,
         "skipLibCheck": true,
@@ -30,7 +28,6 @@
         /* If transpiling with TypeScript: */
         "moduleResolution": "Node16",
         "module": "Node16",
-        "outDir": "dist",
         "sourceMap": true,
 
         /* AND if you're building for a library: */

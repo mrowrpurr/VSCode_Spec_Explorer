@@ -1,5 +1,5 @@
 {
-  "name": "@spec-explorer/my-lib-specs",
+  "name": "@spec-explorer/unit-tests",
   "version": "1.0.0",
   "description": "...",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "test": "ts-mocha --require ts-node/esm src/**/*.spec.ts"
   },
   "dependencies": {
-    "@spec-explorer/my-lib": "workspace:*"
+    "@spec-explorer/lib": "workspace:*"
   },
   "devDependencies": {
     "@types/chai": "^4.3.11",
