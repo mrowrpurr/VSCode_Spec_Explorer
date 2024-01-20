@@ -1,15 +1,16 @@
 {
-  "name": "my-lib-specs",
+  "name": "@spec-explorer/my-lib-specs",
   "version": "1.0.0",
   "description": "...",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "watch": "tsc -w",
     "test": "ts-mocha --require ts-node/esm src/**/*.spec.ts"
   },
   "dependencies": {
-    "@spec-explorer/my-lib": "./packages/my-lib/src"
+    "@spec-explorer/my-lib": "workspace:*"
   },
   "devDependencies": {
     "@types/chai": "^4.3.11",

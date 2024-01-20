@@ -1,4 +1,11 @@
 {
     "name": "spec-explorer",
-    "private": true
+    "private": true,
+    "scripts": {
+        "watch": "concurrently \"pnpm --filter @spec-explorer/my-lib run watch\" \"pnpm --filter @spec-explorer/my-lib-specs run watch\"",
+        "test": "pnpm --filter @spec-explorer/my-lib-specs run test"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
 }

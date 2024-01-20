@@ -4,6 +4,10 @@ export class Something {
     }
 
     getString(): string {
-        return "Something!";
+        return "Something!?";
+    }
+
+    getNumber(): number {
+        return 42;
     }
 }
