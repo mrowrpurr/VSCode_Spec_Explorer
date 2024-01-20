@@ -13,5 +13,8 @@
   "devDependencies": {
     "@types/node": "^20.11.5",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/vscode": "^1.85.0"
   }
 }
