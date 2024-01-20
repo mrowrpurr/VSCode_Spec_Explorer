@@ -1,13 +1,10 @@
 import * as vscode from "vscode";
-import { Something } from "@spec-explorer/library";
 
 export function activate(context: vscode.ExtensionContext) {
-    // TODO: where does this print out???
-    console.log('Congratulations, your extension "spec-explorer" is now active!');
+    console.log("Hiiiii!");
 
     let disposable = vscode.commands.registerCommand("spec-explorer.helloWorld", () => {
-        const s = new Something();
-        vscode.window.showInformationMessage(`Hello: ${s.getString()}`);
+        vscode.window.showInformationMessage(`Hello!`);
     });
 
     context.subscriptions.push(disposable);

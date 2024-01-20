@@ -17,10 +17,13 @@ importers:
 
   app:
     dependencies:
-      '@spec-explorer/library':
+      '@spec-explorer/extension':
         specifier: workspace:*
-        version: link:../lib
+        version: link:../lib/extension
     devDependencies:
+      '@types/chai':
+        specifier: ^4.3.11
+        version: 4.3.11
       '@types/mocha':
         specifier: ^10.0.6
         version: 10.0.6
@@ -42,6 +45,9 @@ importers:
       '@vscode/test-electron':
         specifier: ^2.3.8
         version: 2.3.8
+      chai:
+        specifier: 4.4.1
+        version: 4.4.1
       eslint:
         specifier: ^8.56.0
         version: 8.56.0
@@ -58,7 +64,7 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(webpack@5.89.0)
 
-  lib:
+  lib/core:
     devDependencies:
       '@types/node':
         specifier: ^20.11.5
@@ -67,11 +73,78 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  test/unit:
+  lib/extension:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.11.5
+        version: 20.11.5
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  test/integration:
+    devDependencies:
+      '@types/chai':
+        specifier: ^4.3.11
+        version: 4.3.11
+      '@types/mocha':
+        specifier: ^10.0.6
+        version: 10.0.6
+      '@types/node':
+        specifier: ^20.11.5
+        version: 20.11.5
+      chai:
+        specifier: 4.4.1
+        version: 4.4.1
+      mocha:
+        specifier: ^10.2.0
+        version: 10.2.0
+      ts-mocha:
+        specifier: ^10.0.0
+        version: 10.0.0(mocha@10.2.0)
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.11.5)(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  test/unit/core:
     dependencies:
-      '@spec-explorer/library':
+      '@spec-explorer/core':
         specifier: workspace:*
-        version: link:../../lib
+        version: link:../../../lib/core
+    devDependencies:
+      '@types/chai':
+        specifier: ^4.3.11
+        version: 4.3.11
+      '@types/mocha':
+        specifier: ^10.0.6
+        version: 10.0.6
+      '@types/node':
+        specifier: ^20.11.5
+        version: 20.11.5
+      chai:
+        specifier: 4.4.1
+        version: 4.4.1
+      mocha:
+        specifier: ^10.2.0
+        version: 10.2.0
+      ts-mocha:
+        specifier: ^10.0.0
+        version: 10.0.0(mocha@10.2.0)
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.11.5)(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  test/unit/extension:
+    dependencies:
+      '@spec-explorer/extension':
+        specifier: workspace:*
+        version: link:../../../lib/extension
     devDependencies:
       '@types/chai':
         specifier: ^4.3.11

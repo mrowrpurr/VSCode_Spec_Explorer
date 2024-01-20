@@ -5,8 +5,8 @@
         "watch": "concurrently \"pnpm --filter @spec-explorer/library run watch\" \"pnpm --filter unit-tests run watch\"",
         "test": "pnpm --filter unit-tests run test",
         "test-watch": "nodemon --watch lib/dist --watch test/unit/dist --ext js --exec \"pnpm test\"",
-        "clean": "pnpm --filter @spec-explorer/library run clean && pnpm --filter unit-tests run clean && pnpm --filter @spec-explorer/vscode run clean",
-        "build": "pnpm --filter @spec-explorer/library run build && pnpm --filter unit-tests run build && pnpm --filter @spec-explorer/vscode run build",
+        "clean": "pnpm --filter @spec-explorer/core run clean && pnpm --filter @spec-explorer/extension run clean && pnpm --filter @spec-explorer-test/core run clean && pnpm --filter @spec-explorer-test/extension run clean && pnpm --filter @spec-explorer-test/integration run clean && pnpm --filter @spec-explorer/vscode run clean",
+        "build": "pnpm --filter @spec-explorer/core run build && pnpm --filter @spec-explorer/extension run build && pnpm --filter @spec-explorer-test/core run build && pnpm --filter @spec-explorer-test/extension run build && pnpm --filter @spec-explorer-test/integration run build && pnpm --filter @spec-explorer/vscode run build-all",
         "clean-build": "pnpm run clean && pnpm run build"
     },
     "devDependencies": {

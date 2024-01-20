@@ -5,11 +5,11 @@
             "label": "Watch All",
             "type": "shell",
             "command": "pnpm watch",
-            "problemMatcher": "$tsc-watch",
-            "isBackground": true,
-            "presentation": {
-                "reveal": "silent"
-            }
+            "problemMatcher": "$tsc-watch"
+            // "isBackground": true,
+            // "presentation": {
+            //     "reveal": "silent"
+            // }
             // "runOptions": {
             //     "runOn": "folderOpen"
             // }
@@ -17,7 +17,7 @@
         {
             "label": "Watch Unit Tests",
             "type": "shell",
-            "command": "pnpm --filter unit-tests test-watch",
+            "command": "pnpm test-watch",
             "problemMatcher": "$tsc"
         },
         {
