@@ -5,25 +5,32 @@
             "label": "Watch All",
             "type": "shell",
             "command": "pnpm watch",
-            "problemMatcher": "$tsc-watch"
-            // "isBackground": true,
-            // "presentation": {
-            //     "reveal": "silent"
-            // }
-            // "runOptions": {
-            //     "runOn": "folderOpen"
-            // }
+            "problemMatcher": "$tsc-watch",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "silent"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         },
         {
             "label": "Watch Unit Tests",
             "type": "shell",
-            "command": "pnpm test-watch",
-            "problemMatcher": "$tsc"
+            "command": "pnpm unit-tests-watch",
+            "problemMatcher": "$tsc-watch",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "silent"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         },
         {
             "label": "Run All Tests",
             "type": "shell",
-            "command": "pnpm test",
+            "command": "pnpm unit-tests",
             "problemMatcher": "$tsc"
         },
         {
@@ -36,12 +43,6 @@
             "label": "Clean All",
             "type": "shell",
             "command": "pnpm clean",
-            "problemMatcher": "$tsc"
-        },
-        {
-            "label": "Clean + Build All",
-            "type": "shell",
-            "command": "pnpm clean-build",
             "problemMatcher": "$tsc"
         }
     ]

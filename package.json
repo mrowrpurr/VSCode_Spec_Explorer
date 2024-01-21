@@ -2,12 +2,11 @@
     "name": "spec-explorer",
     "private": true,
     "scripts": {
-        "watch": "concurrently \"pnpm --filter @spec-explorer/library run watch\" \"pnpm --filter unit-tests run watch\"",
-        "test": "pnpm --filter unit-tests run test",
-        "test-watch": "nodemon --watch lib/dist --watch test/unit/dist --ext js --exec \"pnpm test\"",
-        "clean": "pnpm --filter @spec-explorer/core run clean && pnpm --filter @spec-explorer/extension run clean && pnpm --filter @spec-explorer-test/core run clean && pnpm --filter @spec-explorer-test/extension run clean && pnpm --filter @spec-explorer-test/integration run clean && pnpm --filter @spec-explorer/vscode run clean",
-        "build": "pnpm --filter @spec-explorer/core run build && pnpm --filter @spec-explorer/extension run build && pnpm --filter @spec-explorer-test/core run build && pnpm --filter @spec-explorer-test/extension run build && pnpm --filter @spec-explorer-test/integration run build && pnpm --filter @spec-explorer/vscode run build",
-        "clean-build": "pnpm run clean && pnpm run build"
+        "watch": "concurrently \"pnpm --filter @spec-explorer/core run watch\" \"pnpm --filter @spec-explorer/extension run watch\" \"pnpm --filter @spec-explorer-tests/core run watch\" \"pnpm --filter @spec-explorer-tests/extension run watch\" \"pnpm --filter @spec-explorer/vscode run watch\"",
+        "clean": "pnpm --filter @spec-explorer/core run clean && pnpm --filter @spec-explorer/extension run clean && pnpm --filter @spec-explorer-tests/core run clean && pnpm --filter @spec-explorer-tests/extension run clean && pnpm --filter @spec-explorer-tests/integration run clean && pnpm --filter @spec-explorer/vscode run clean",
+        "build": "pnpm --filter @spec-explorer/core run build && pnpm --filter @spec-explorer/extension run build && pnpm --filter @spec-explorer-tests/core run build && pnpm --filter @spec-explorer-tests/extension run build && pnpm --filter @spec-explorer-tests/integration run build && pnpm --filter @spec-explorer/vscode run build",
+        "unit-tests": "pnpm --filter @spec-explorer-tests/core run test && pnpm --filter @spec-explorer-tests/extension run test",
+        "unit-tests-watch": "nodemon --watch lib/core/dist --watch lib/extension/dist --watch spec/unit/core/dist --watch spec/unit/extension/dist --ext js --exec \"pnpm unit-tests\""
     },
     "devDependencies": {
         "concurrently": "^8.2.2",
