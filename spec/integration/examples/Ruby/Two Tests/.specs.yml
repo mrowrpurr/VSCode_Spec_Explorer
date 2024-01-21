@@ -1,0 +1,2 @@
+discover:
+  command: something.exe --listTests

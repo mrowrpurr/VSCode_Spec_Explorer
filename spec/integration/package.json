@@ -27,14 +27,6 @@
     "vscode": "^1.85.0"
   },
   "activationEvents": [
-    "workspaceContains:.specs.json"
-  ],
-  "contributes": {
-    "commands": [
-      {
-        "command": "spec-explorer.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  }
+    "workspaceContains:.specs.yml"
+  ]
 }
