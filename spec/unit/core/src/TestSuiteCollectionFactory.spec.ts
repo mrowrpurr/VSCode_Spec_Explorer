@@ -22,8 +22,13 @@ describe("TestSuiteCollectionFactory", () => {
                 },
             });
             expect(collection).to.not.be.undefined;
-            // expect suites count to be 2 and then check their names...
-            expect(collection!.suites.length).to.equal(2);
+            expect(collection!.count()).to.equal(2);
+            // expect(collection!.suites[0].name).to.equal("suite-1");
+            // expect(collection!.suites[1].name).to.equal("suite-2");
+
+            // TODO ...
+
+            // regardless of order, get a suite with the name '...'
         });
     });
 

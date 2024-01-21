@@ -17,7 +17,7 @@ export function CreateTestSuiteCollection(input: any): TestSuiteCollection | und
         } else if (suitesInput instanceof Object) {
             const suiteNames = Object.keys(suitesInput);
             for (const suiteName of suiteNames) {
-                collection.suites.push(new TestSuite());
+                collection.addSuite(suiteName, new TestSuite());
             }
         }
 
