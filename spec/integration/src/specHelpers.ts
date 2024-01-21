@@ -14,9 +14,9 @@ export async function gotoFolder(folderPath: string) {
     await vscode.commands.executeCommand("vscode.openFolder", vscode.Uri.file(folderPath));
 }
 
-export async function gotoExample(exampleName: string) {
+export async function gotoExample(examplePathParts: string[]) {
     const runningNodeFolder = process.cwd();
-    const relativePathToExample = `../../examples/${exampleName}`;
+    const relativePathToExample = `../../examples/${examplePathParts.join("/")}`;
     const absolutePathToExample = path.join(runningNodeFolder, relativePathToExample);
 
     await gotoFolder(absolutePathToExample);
