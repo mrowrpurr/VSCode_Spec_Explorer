@@ -1,2 +1,2 @@
-import { activate, deactivate, extension } from "@spec-explorer/extension";
-export { activate, deactivate, extension };
+import { activate, deactivate } from "@spec-explorer/extension";
+export { activate, deactivate };
