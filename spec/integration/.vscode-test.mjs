@@ -4,7 +4,6 @@ export default defineConfig({
 	files: "dist/**/*.spec.js",
 	// workspaceFolder: "D:/",
 	mocha: {
-		timeout: 10000,
-	},
-	launchArgs: ["C:/"]
+		timeout: 10000
+	}
 });

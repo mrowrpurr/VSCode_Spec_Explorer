@@ -2,7 +2,7 @@
     "name": "spec-explorer",
     "private": true,
     "scripts": {
-        "watch": "concurrently \"pnpm --filter @spec-explorer/core run watch\" \"pnpm --filter @spec-explorer/extension run watch\" \"pnpm --filter @spec-explorer-tests/core run watch\" \"pnpm --filter @spec-explorer-tests/extension run watch\" \"pnpm --filter @spec-explorer/vscode run watch\"",
+        "watch": "concurrently \"pnpm --filter @spec-explorer/core run watch\" \"pnpm --filter @spec-explorer/extension run watch\" \"pnpm --filter @spec-explorer-tests/core run watch\" \"pnpm --filter @spec-explorer-tests/extension run watch\" \"pnpm --filter @spec-explorer-tests/integration run watch\" \"pnpm --filter @spec-explorer/vscode run watch\"",
         "clean": "pnpm --filter @spec-explorer/core run clean && pnpm --filter @spec-explorer/extension run clean && pnpm --filter @spec-explorer-tests/core run clean && pnpm --filter @spec-explorer-tests/extension run clean && pnpm --filter @spec-explorer-tests/integration run clean && pnpm --filter @spec-explorer/vscode run clean",
         "build": "pnpm --filter @spec-explorer/core run build && pnpm --filter @spec-explorer/extension run build && pnpm --filter @spec-explorer-tests/core run build && pnpm --filter @spec-explorer-tests/extension run build && pnpm --filter @spec-explorer-tests/integration run build && pnpm --filter @spec-explorer/vscode run build",
         "unit-tests": "pnpm --filter @spec-explorer-tests/core run test && pnpm --filter @spec-explorer-tests/extension run test",
