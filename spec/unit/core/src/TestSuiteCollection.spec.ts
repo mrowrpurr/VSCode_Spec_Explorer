@@ -14,6 +14,15 @@ describe("TestSuiteCollection", () => {
         expect(collection.count()).to.equal(1);
     });
 
-    it("can get a test suite by name");
-    it("can check if a test suite exists by name");
+    it("can get a test suite by name", () => {
+        const suite = new TestSuite();
+        collection.addSuite("Foo", suite);
+        expect(collection.getSuite("Foo")).to.equal(suite);
+    });
+
+    it("can check if a test suite exists by name", () => {
+        expect(collection.hasSuite("Foo")).to.be.false;
+        collection.addSuite("Foo", new TestSuite());
+        expect(collection.hasSuite("Foo")).to.be.true;
+    });
 });
