@@ -52,7 +52,3 @@ export async function gotoExample(...examplePathParts: string[]) {
 
     await gotoFolder(absolutePathToExample);
 }
-
-export async function gotoRubyExample(...examplePathParts: string[]) {
-    await gotoExample("Ruby", ...examplePathParts);
-}

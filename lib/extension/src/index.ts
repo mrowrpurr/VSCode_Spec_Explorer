@@ -3,12 +3,11 @@ import { SpecExplorerExtension } from "./SpecExplorerExtension";
 
 export { SpecExplorerExtension };
 
-const extension = new SpecExplorerExtension();
+let extension: SpecExplorerExtension | undefined;
 
-export function activate(context: vscode.ExtensionContext) {
-    extension.activate(context);
+export function activate() {
+    if (!extension) extension = new SpecExplorerExtension();
+    return extension;
 }
 
-export function deactivate() {
-    extension.deactivate();
-}
+export function deactivate() {}

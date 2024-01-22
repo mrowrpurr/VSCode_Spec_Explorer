@@ -1,13 +1,11 @@
 import * as vscode from "vscode";
+import { SpecExplorerController } from "./SpecExplorerController";
 
 export class SpecExplorerExtension {
-    activate(context: vscode.ExtensionContext) {
-        const testController = vscode.tests.createTestController("Spec Explorer", "Spec Explorer");
-        testController.refreshHandler = () => {
-            // SHOW A MESSAGE!
-            vscode.window.showInformationMessage("Refreshed Tests!");
-        };
-    }
+    controller = new SpecExplorerController();
 
-    deactivate() {}
+    constructor() {
+        // show a message!
+        vscode.window.showInformationMessage("Spec Explorer Extension Activated!");
+    }
 }
