@@ -11,16 +11,10 @@
     "Other"
   ],
   "activationEvents": [
-    "workspaceContains:.specs.json"
+    "workspaceContains:**/.specs.yml",
+    "workspaceContains:**/.specs.yaml",
+    "workspaceContains:**/.specs.json"
   ],
-  "contributes": {
-    "commands": [
-      {
-        "command": "spec-explorer.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
     "build": "webpack",
