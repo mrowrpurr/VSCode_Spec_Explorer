@@ -1,5 +1,5 @@
 {
-  "name": "@spec-explorer/vscode",
+  "name": "@spec-explorer/app",
   "displayName": "Spec Explorer",
   "description": "Native VS Code Testing Support for ANY test framework",
   "version": "0.0.1",
@@ -18,8 +18,7 @@
   "scripts": {
     "vscode:prepublish": "pnpm run package",
     "build": "webpack",
-    "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
-    "clean-build": "pnpm run clean && pnpm run build",
+    "clean": "rd /s /q dist",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
     "lint": "eslint src --ext ts"

@@ -6,7 +6,6 @@
     "build": "tsc",
     "watch": "tsc -w",
     "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
-    "clean-build": "pnpm run clean && pnpm run build",
     "test": "vscode-test"
   },
   "dependencies": {

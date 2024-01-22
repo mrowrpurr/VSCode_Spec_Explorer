@@ -1,4 +1,4 @@
-# Example test framework:
+# Example test framework for Ruby
 
 module TestFramework
   Test = Struct.new(:name, :block, :line, :file)
@@ -33,13 +33,10 @@ module TestFramework
       tests.each do |test|
         tests_passed = false unless run_test(test)
       end
-      tests_passed ? 0 : 1
+      return tests_passed ? 0 : 1
     when 1
       if ARGV[0] == "--list"
-        # List all tests
         tests.each { |test| puts "#{test.file}|#{test.line}|#{test.name}" }
-      else
-        puts "Usage: ruby #{__FILE__} [--list] [file name] [line number]"
       end
     when 2
       file, line = ARGV
@@ -50,10 +47,9 @@ module TestFramework
       else
         puts "No test found on line #{line} in file #{file}"
       end
-    else
-      puts "Usage: ruby #{__FILE__} [--list] [file name] [line number]"
     end
 
+    puts "Usage: ruby #{__FILE__} [--list] [file name] [line number]"
     0
   end
 end

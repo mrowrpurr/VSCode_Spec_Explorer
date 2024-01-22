@@ -47,7 +47,8 @@ export async function gotoFolder(folderPath: string) {
 
 export async function gotoExample(...examplePathParts: string[]) {
     const runningNodeFolder = process.cwd();
-    const relativePathToExample = `../../examples/${examplePathParts.join("/")}`;
+
+    const relativePathToExample = `../../../../examples/${examplePathParts.join("/")}`;
     const absolutePathToExample = path.join(runningNodeFolder, relativePathToExample);
 
     await gotoFolder(absolutePathToExample);

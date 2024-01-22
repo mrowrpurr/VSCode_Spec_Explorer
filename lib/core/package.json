@@ -7,8 +7,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "clean": "del tsconfig.tsbuildinfo && rd /s /q dist",
-    "clean-build": "pnpm run clean && pnpm run build"
+    "clean": "del tsconfig.tsbuildinfo && rd /s /q dist"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
