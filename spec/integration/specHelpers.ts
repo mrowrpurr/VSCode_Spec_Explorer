@@ -5,7 +5,7 @@ import { SpecExplorerExtension } from "@spec-explorer/extension";
 
 export { expect };
 
-export const EXTENSION_ID = "undefined_publisher.@spec-explorer-tests/integration";
+export const EXTENSION_ID = "undefined_publisher.@spec-explorer/app";
 
 export function getRawExtension() {
     const extension = vscode.extensions.getExtension(EXTENSION_ID);

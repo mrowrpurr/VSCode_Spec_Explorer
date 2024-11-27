@@ -18,20 +18,27 @@
   "scripts": {
     "vscode:prepublish": "pnpm run package",
     "build": "webpack",
-    "clean": "rd /s /q dist",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "test-build": "tsc -p tsconfig.test.json",
+    "test-build-watch": "tsc -p tsconfig.test.json -w"
   },
   "dependencies": {
     "@spec-explorer/extension": "workspace:*"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.11",
     "@types/node": "18.x",
     "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "chai": "4.4.1",
     "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",

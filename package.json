@@ -2,15 +2,16 @@
     "name": "spec-explorer",
     "private": true,
     "scripts": {
-        "watch-all": "concurrently \"pnpm --filter @spec-explorer/core run watch\" \"pnpm --filter @spec-explorer/extension run watch\" \"pnpm --filter @spec-explorer-tests/integration run watch\" \"pnpm test-build-watch\" \"pnpm --filter @spec-explorer/app run watch\"",
-        "clean-all": "pnpm --filter @spec-explorer/core clean && pnpm --filter @spec-explorer/extension clean && pnpm --filter @spec-explorer/app clean && pnpm --filter @spec-explorer-tests/integration clean && pnpm test-clean",
-        "build-all": "pnpm --filter @spec-explorer/core build && pnpm --filter @spec-explorer/extension build && pnpm --filter @spec-explorer/app build && pnpm --filter @spec-explorer-tests/integration build && pnpm test-build",
-        "test-all": "pnpm test && pnpm --filter @spec-explorer-tests/integration test",
-        "test": "ts-mocha --require ts-node/esm spec/unit/**/*.spec.ts",
-        "test-watch": "ts-mocha --require ts-node/esm --watch spec/unit/**/*.spec.ts",
-        "test-build": "tsc",
-        "test-build-watch": "tsc -w",
-        "test-clean": "del tsconfig.tsbuildinfo && rd /s /q dist"
+        "watch-all": "concurrently \"pnpm --filter @spec-explorer/core run watch\" \"pnpm --filter @spec-explorer/extension run watch\" \"pnpm --filter @spec-explorer/app run watch\" \"pnpm --filter @spec-explorer/app run test-build-watch\" \"pnpm unit-test-build-watch\"",
+        "build-all": "pnpm --filter @spec-explorer/core build && pnpm --filter @spec-explorer/extension build && pnpm --filter @spec-explorer/app build && pnpm --filter @spec-explorer/app test-build && pnpm unit-test-build\"",
+        "clean": "rimraf --glob \"**/dist\" --glob \"**/tsconfig.tsbuildinfo\"",
+        "test": "pnpm build-all && pnpm test-all",
+        "test-all": "pnpm unit-test && pnpm --filter @spec-explorer/app test",
+        "unit-test": "ts-mocha --require ts-node/esm spec/unit/**/*.spec.ts",
+        "unit-test-watch": "ts-mocha --require ts-node/esm --watch spec/unit/**/*.spec.ts",
+        "unit-test-build": "tsc",
+        "unit-test-build-watch": "tsc -w",
+        "unit-test-clean": "del tsconfig.tsbuildinfo && rd /s /q dist"
     },
     "devDependencies": {
         "@types/chai": "^4.3.11",
@@ -20,6 +21,7 @@
         "concurrently": "^8.2.2",
         "mocha": "^10.2.0",
         "nodemon": "^3.0.3",
+        "rimraf": "^5.0.5",
         "ts-mocha": "^10.0.0",
         "ts-node": "^10.9.2",
         "typescript": "^5.3.3"

@@ -1,7 +1,7 @@
 {
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        "outDir": "./dist",
+        "outDir": "./spec/dist/unit",
         "rootDir": "./spec"
     },
     "include": ["./spec/unit/**/*.ts"]
